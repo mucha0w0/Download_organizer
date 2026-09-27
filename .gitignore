@@ -1,0 +1,15 @@
+# Machine-specific config written by Install.ps1
+config.json
+
+# Watcher runtime files (also ignored if pointed at this folder)
+*_downloads_watcher_log.txt
+*_downloads_watcher_journal.jsonl
+*.log
+*.jsonl
+
+# Shortcuts created by the Startup-folder fallback
+*.lnk
+
+# Windows folder noise
+Thumbs.db
+desktop.ini

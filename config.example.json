@@ -1,0 +1,336 @@
+{
+  "watchPath": "%USERPROFILE%\\Downloads",
+  "logPath": "%USERPROFILE%\\Downloads\\_downloads_watcher_log.txt",
+  "journalPath": "%USERPROFILE%\\Downloads\\_downloads_watcher_journal.jsonl",
+  "categories": [
+    "01_インストーラー",
+    "02_アーカイブ",
+    "03_音源・UST",
+    "04_音声",
+    "05_動画",
+    "06_3Dプリント",
+    "07_ドキュメント",
+    "08_データ・CSV",
+    "09_画像・スクショ",
+    "10_学習・回路",
+    "11_ML・モデル",
+    "12_フォント・素材",
+    "99_その他"
+  ],
+  "ignore": {
+    "namePrefixes": [
+      ".",
+      "_"
+    ],
+    "namePatterns": [
+      "Unconfirmed*",
+      "desktop.ini",
+      "Thumbs.db",
+      "~$*",
+      "*.lnk"
+    ],
+    "partialExtensions": [
+      ".crdownload",
+      ".tmp",
+      ".partial",
+      ".download",
+      ".part",
+      ".opdownload",
+      ".!ut",
+      ".bc!",
+      ".temp"
+    ]
+  },
+  "rules": [
+    {
+      "match": "nameContains",
+      "values": [
+        "ust",
+        "openutau",
+        "voicebank",
+        "音源",
+        "vocaloid",
+        "synthv",
+        "cevio",
+        "単独音",
+        "連続音",
+        "vb.",
+        "utau"
+      ],
+      "category": "03_音源・UST"
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".ust",
+        ".ustx",
+        ".vsqx",
+        ".oudep",
+        ".svp",
+        ".ccs",
+        ".vpr"
+      ],
+      "category": "03_音源・UST",
+      "filesOnly": true
+    },
+    {
+      "match": "nameContains",
+      "values": [
+        "bambu",
+        "printables",
+        "prusaslicer",
+        "orcaslicer",
+        "cura",
+        "3dprint",
+        "3dプリント"
+      ],
+      "category": "06_3Dプリント"
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".3mf",
+        ".stl",
+        ".obj",
+        ".gcode",
+        ".bgcode",
+        ".amf",
+        ".3ds"
+      ],
+      "category": "06_3Dプリント",
+      "filesOnly": true
+    },
+    {
+      "match": "nameContains",
+      "values": [
+        "ltspice",
+        "spice",
+        "回路",
+        "schematic",
+        "kicad",
+        "eagle",
+        "gerber"
+      ],
+      "category": "10_学習・回路"
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".asc",
+        ".raw",
+        ".lib",
+        ".cir",
+        ".net",
+        ".sch",
+        ".kicad_pcb",
+        ".kicad_sch",
+        ".brd"
+      ],
+      "category": "10_学習・回路",
+      "filesOnly": true
+    },
+    {
+      "match": "nameContains",
+      "values": [
+        "checkpoint",
+        "onnx",
+        "lora",
+        "safetensor",
+        "huggingface",
+        "hifi",
+        "rvc",
+        "so-vits",
+        "diff-svc",
+        "game_model",
+        "gamemodel",
+        "stable-diffusion",
+        "sdxl",
+        "comfyui",
+        "webui"
+      ],
+      "category": "11_ML・モデル"
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".pt",
+        ".pth",
+        ".onnx",
+        ".safetensors",
+        ".ckpt",
+        ".gguf",
+        ".bin",
+        ".pkl",
+        ".h5",
+        ".pb"
+      ],
+      "category": "11_ML・モデル",
+      "filesOnly": true
+    },
+    {
+      "match": "nameContains",
+      "values": [
+        "font",
+        "フォント",
+        "素材",
+        "texture",
+        "brush",
+        "asset",
+        "clipstudio",
+        "csp"
+      ],
+      "category": "12_フォント・素材"
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".ttf",
+        ".otf",
+        ".woff",
+        ".woff2",
+        ".ttc",
+        ".fon"
+      ],
+      "category": "12_フォント・素材",
+      "filesOnly": true
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".exe",
+        ".msi",
+        ".msix",
+        ".appx",
+        ".bat",
+        ".cmd",
+        ".ps1"
+      ],
+      "category": "01_インストーラー",
+      "filesOnly": true
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".zip",
+        ".rar",
+        ".7z",
+        ".tar",
+        ".gz",
+        ".tgz",
+        ".bz2",
+        ".xz",
+        ".cab",
+        ".iso"
+      ],
+      "category": "02_アーカイブ",
+      "filesOnly": true
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".wav",
+        ".mp3",
+        ".flac",
+        ".aac",
+        ".m4a",
+        ".ogg",
+        ".wma",
+        ".aiff",
+        ".asd",
+        ".mid",
+        ".midi"
+      ],
+      "category": "04_音声",
+      "filesOnly": true
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".mp4",
+        ".mov",
+        ".mkv",
+        ".avi",
+        ".webm",
+        ".wmv",
+        ".m4v",
+        ".flv"
+      ],
+      "category": "05_動画",
+      "filesOnly": true
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".pdf",
+        ".docx",
+        ".doc",
+        ".xlsx",
+        ".xls",
+        ".pptx",
+        ".ppt",
+        ".md",
+        ".txt",
+        ".rtf",
+        ".odt",
+        ".ods"
+      ],
+      "category": "07_ドキュメント",
+      "filesOnly": true
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".csv",
+        ".tsv",
+        ".json",
+        ".xml",
+        ".yaml",
+        ".yml",
+        ".parquet",
+        ".sqlite",
+        ".db"
+      ],
+      "category": "08_データ・CSV",
+      "filesOnly": true
+    },
+    {
+      "match": "extension",
+      "values": [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".gif",
+        ".webp",
+        ".bmp",
+        ".tiff",
+        ".tif",
+        ".svg",
+        ".ico",
+        ".heic"
+      ],
+      "category": "09_画像・スクショ",
+      "filesOnly": true
+    },
+    {
+      "match": "nameRegex",
+      "values": [
+        "(?i)ltspice|spice"
+      ],
+      "category": "10_学習・回路",
+      "filesOnly": true
+    }
+  ],
+  "defaultCategory": "99_その他",
+  "settings": {
+    "settleMs": 700,
+    "sizeStablePolls": 3,
+    "sizeStableDelayMs": 1000,
+    "maxWaitSec": 180,
+    "toastEnabled": true,
+    "singleInstanceMutex": "Global\\DownloadsSorterWatcher",
+    "bufferSize": 65536,
+    "idleReloadConfigMs": 5000,
+    "removeEmptyFolders": true,
+    "emptyFolderSweepIntervalSec": 30
+  }
+}
